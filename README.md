@@ -97,11 +97,19 @@ public class CompletableFutureExample {
         // Print the combined result
         System.out.println("Fetching data asynchronously...");
         try {
-			System.out.println("Result: " + combinedFuture.get());
-		} catch (InterruptedException | ExecutionException e) {
-			e.printStackTrace();
-		}
+              System.out.println("Result: " + combinedFuture.get());
+        } catch (InterruptedException | ExecutionException e) {
+              e.printStackTrace();
+        }
         System.out.println("main method finished executing");
     }
 }
+```
+### Code Execution Output
+```
+Fetching data asynchronously...
+userFuture being executed by :ForkJoinPool.commonPool-worker-1
+orderFuture being executed by :ForkJoinPool.commonPool-worker-2
+Result: User Data: John Doe, Order Data: [Order1, Order2, Order3]
+main method finished executing
 ```
