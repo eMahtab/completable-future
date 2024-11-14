@@ -3,7 +3,7 @@ A Future that may be explicitly completed (setting its value and status), and ma
 **CompletableFuture class was introduced with Java 1.8**
 
 
-#### Combining the result of two async operations (CompletableFuture)
+#### Example 1 : Combining the result of two async operations (CompletableFuture)
 ```java
 import java.util.concurrent.CompletableFuture;
 
