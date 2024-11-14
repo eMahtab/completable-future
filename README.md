@@ -113,3 +113,29 @@ orderFuture being executed by :ForkJoinPool.commonPool-worker-2
 Result: User Data: John Doe, Order Data: [Order1, Order2, Order3]
 main method finished executing
 ```
+
+### Chaining operations on CompletableFuture
+```java
+import java.util.concurrent.CompletableFuture;
+public class CompletableFutureExample {
+	public static void main(String[] args) {
+		CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> "Hello")
+		        .thenApply(result -> result + " World")
+		        .thenApply(result -> result.toUpperCase());
+
+		future.thenAccept((result) -> System.out.println("Result :"+result)); // Output: HELLO WORLD
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println("Main method finished executing");
+	}
+}
+```
+
+### Code Execution Output:
+```
+Result :HELLO WORLD
+Main method finished executing
+```
