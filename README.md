@@ -1,4 +1,6 @@
 # CompletableFuture
+A Future that may be explicitly completed (setting its value and status), and may be used as a CompletionStage, supporting dependent functions and actions that trigger upon its completion.
+**CompletableFuture class was introduced with Java 1.8**
 
 ```java
 import java.util.concurrent.CompletableFuture;
