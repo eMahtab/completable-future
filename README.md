@@ -48,3 +48,13 @@ public class CompletableFutureExample {
     }
 }
 ```
+
+### Code Execution Output
+```
+orderFuture being executed by :ForkJoinPool.commonPool-worker-2
+Fetching data asynchronously...
+userFuture being executed by :ForkJoinPool.commonPool-worker-1
+Running the code in main thread
+Result: User Data: John Doe, Order Data: [Order1, Order2, Order3]
+main method finished executing
+```
