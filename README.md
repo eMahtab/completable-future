@@ -114,7 +114,7 @@ Result: User Data: John Doe, Order Data: [Order1, Order2, Order3]
 main method finished executing
 ```
 
-### Chaining operations on CompletableFuture
+### Example 3 : Chaining operations on CompletableFuture
 ```java
 import java.util.concurrent.CompletableFuture;
 public class CompletableFutureExample {
